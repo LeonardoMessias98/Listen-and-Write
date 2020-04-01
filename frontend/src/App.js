@@ -23,7 +23,9 @@ function Verificar(){
     return
   }
   if(input.value === text){
-    alert('Acertou Mizeravi')
+    alert('Acertou Mizeravi !')
+  }else{
+    alert('Ta errado macaco !')
   }
 }
 
