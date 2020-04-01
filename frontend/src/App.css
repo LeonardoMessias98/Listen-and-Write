@@ -1,0 +1,28 @@
+.App {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+
+.btn{
+  box-shadow: 0px 0px 1px black;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+	box-sizing: border-box;
+	border: none;
+	border-radius: 50%;
+  text-decoration:none;
+  background:linear-gradient(to bottom right, rgb(137, 220, 245), rgb(0, 195, 255));
+}
+
+#icon{
+  position: relative;
+  left: 2px;
+}

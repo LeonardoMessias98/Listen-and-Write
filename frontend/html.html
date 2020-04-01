@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Evandro chupa pica</h1>
+<script>
+    var vozes;
+window.speechSynthesis.onvoiceschanged = function() {
+  vozes = window.speechSynthesis.getVoices();
+};
+// :eyes: Observa todos os elementos clicados no Body
+document.querySelector("body").addEventListener("click", e => {
+  // :repeat: Evita Redirecionamento
+  e.preventDefault();
+  // :speaking_head: Pega a API do web speech
+  const api = window.speechSynthesis;
+  // :mouse: Pega elemento clicado
+  const target = e.target;
+  // :lips: Prepara a fala
+  const fala = new SpeechSynthesisUtterance(target.innerText);
+  // :flag_br: Fala em Portugues
+  fala.voice = vozes.filter(v => v.lang == "pt-BR")[0];
+  // :microphone: Solta a voz
+  api.speak(fala);
+});
+</script>
+</body>
+</html>
